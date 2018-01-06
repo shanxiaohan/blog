@@ -2,7 +2,8 @@
 layout: post
 title: 'Restcomm Web-SDK环境搭建'
 date: 2017-04-07
-tags: [Restcomm]
+tags: 
+- Restcomm
 ---
 
 实验室的项目= =由于甲方购买了Restcomm的产品(Restcomm是一款云通讯平台，可以构建基于web的音视频通信和即时消息等应用)，希望我们在开发新需求时能够利用Restcomm的平台（p.s.项目背景是开发一个企业内部使用的融合服务器，包括音视频通信，即时消息通信，文件传输，地图服务等，这里的音视频通信可以直接使用Restcomm的Web-SDK，内部封装了和sip-servlet消息转换的部分）。于是在实验室服务器上自己搭了个环境，跑了个hello-world还是遇到一些问题的，先Mark一下~  
@@ -15,7 +16,7 @@ tags: [Restcomm]
   之前在owncloud上传过安装包，[链接](
 http://10.109.247.139:8002/owncloud/index.php/apps/files/?dir=/RestComm/software&fileid=22) ，我选择的是Restcomm-JBoss-AS7-8.1.0.1145，解压后需要修改一下配置文件才能启动：  
 
-```shell
+```bash
   配置文件路径：  
   vim /home/shanxiaohan/node/restcomm/Restcomm-JBoss-AS7-8.1.0.1145/bin/restcomm/restcomm.conf  
   # Network configuration
@@ -35,7 +36,7 @@ http://10.109.247.139:8002/owncloud/index.php/apps/files/?dir=/RestComm/software
 
 启动Restcomm-server:  
 
-```shell
+```bash
 cd /home/shanxiaohan/node/restcomm/Restcomm-JBoss-AS7-8.1.0.1145/bin/restcomm/  
 
 ./start-restcomm.sh
@@ -43,7 +44,7 @@ cd /home/shanxiaohan/node/restcomm/Restcomm-JBoss-AS7-8.1.0.1145/bin/restcomm/
 
 这时候启动restcomm-server会同时启动media-server，mediaserver启动可能会有报错，修改一下mediaserver的配置文件  
 
-```shell
+```bash
 cd /home/shanxiaohan/node/restcomm/Restcomm-JBoss-AS7-8.1.0.1145/mediaserver  
 #修改配置文件中的host等参数
 vim mediaserver.conf
@@ -65,9 +66,9 @@ vim mediaserver.conf
   网上教程很多这里就不赘述啦~注意更换npm的registry，可以用淘宝镜像~  
   更新npm:    
 
-    ```shell
-      [sudo] npm install npm@latest -g
-    ```
+```bash
+  [sudo] npm install npm@latest -g
+```
 
   注意安装node_modules的路径问题，否则在自己的工程下找不到模块= =  
 
@@ -87,7 +88,6 @@ vim mediaserver.conf
 
 查看二者是否有交集  
 
- 2) 
 
 
 
