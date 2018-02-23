@@ -1,0 +1,24 @@
+{
+    "remotePath": "/home/ubuntu/blog/hexo/source/_posts/",
+    "host": "xiaohan77.cn",
+    "username": "ubuntu",
+    "password": "shanxiaohan77",
+    "port": 22,
+    "secure": false,
+    "protocol": "sftp",
+    "uploadOnSave": true,
+    "passive": false,
+    "debug": false,
+    "privateKeyPath": null,
+    "passphrase": null,
+    "ignore": [
+        "\\.vscode",
+        "\\.git",
+        "\\.DS_Store"
+    ],
+    "generatedFiles": {
+        "uploadOnSave": true,
+        "extensionsToInclude": [],
+        "path": ""
+    }
+}
